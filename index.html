@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,47 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superset Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Bigag-N</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="navbar">
+        <div class="logo">Bigag-N Dashboard</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+        </ul>
+    </div>
 
-    <main>
-        <section id="auth-section">
-            <div class="form-container" id="login-form">
-                <h2>Welcome Back!</h2>
-                <form>
-                    <input type="text" placeholder="Username" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
-            </div>
-
-            <div class="form-container" id="signup-form" style="display:none;">
-                <h2>Create an Account</h2>
-                <form>
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <input type="password" placeholder="Confirm Password" required>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="form-container">
+            <h2>Hello! Welcome back!</h2>
+            <p>Let’s Login to Your Account</p>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#signup">Sign Up</a></p>
+        </div>
+    </div>
 </body>
 </html>
